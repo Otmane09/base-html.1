@@ -1,10 +1,10 @@
-tag-immagini.html
+<title>tag-immagini</title>
 
 <html>
 
     <body>
         <!-- tag minimo -->
-        <img src="batman-superman.jpeg"/>
+        <img src="scrivania/batman-superman.jpeg"/>
         
         <!-- tag con attributo alt -->
         <img src="batman-superman.jpeg" alt="Una coppia imbattibile: Batman e Superman!"/>
@@ -15,6 +15,27 @@ tag-immagini.html
         height="400"
         src="batman-superman.jpeg"
         alt="Batman e Superman in posa plastica su sfondo tenebroso"/>
+
+          <!-- miglioramento delle performance -->
+        
+          <!-- tag con attributi di dimensione -->
+          <img
+          srcset="
+          batman-superman.jpeg 200w,
+          batman-superman.jpeg 530w,
+          batman-superman.jpeg 800w,
+          "
+
+          sizes="
+          (max-width: 320px) 180px,
+          (max-width: 720px) 400px,
+          800px,
+          "
+          src="batman-superman.jpeg"
+          alt="Batman e Superman in posa plastica con sfondo tenebroso"/>
+
+          
+
         
     </body>
 
