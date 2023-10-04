@@ -1,52 +1,121 @@
 <!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=width-device" />
+        <title>Forms</title>
+    </head>
 
-<html>
     <body>
-        <form action="http://localhost:3000/demo" method="post">
-            <h1>Scheda dell`eroe</h1>
-            <p>I campi obbligatori sono contrassegnati da <strong><abbr title="richiesto">*</abbr></strong></p>
-            <section>
-                <h2>Eroe</h2>
-                <div>
-                    <label for="hero">
-                        <spa>Nome:</spa>
-                        <strong><abbr title="richiesto">*</abbr></strong>
+        <h2>Esempio di pagina web con un form</h2>
 
+        <div>
+            <fieldset>
+                <legend>Dati anagrafici</legend>
+
+                <div>
+                    <label for="nome">
+                        <span>Inserisci qui il tuo nome:</span>
+                        <input type="text" id="nome" name="Dati anagrafici">
                     </label>
 
-                    <input type="text" id="hero" name="hero" autofocus required>
                 </div>
 
                 <div>
-                    <label for="power">
-                        <spa>Potere:</spa>
-                        <strong><abbr title="richiesto">*</abbr></strong>
 
+                    <label for="cognome">
+                        <span>Inserisci qui il tuo cognome:</span>
+                        <input type="text" id="cognome" name="Dati anagrafici">
                     </label>
-
-                    <input type="text" id="power" name="power" value="Superforza">
+                    
                 </div>
 
                 <div>
-                    <label for="mail">
-                        <spa>E-mail:</spa>
-                        <strong><abbr title="richiesto">*</abbr></strong>
+                    <label for="sesso">
+                        
+                        <span>Sesso:</span>
+                        <input type="radio" id="sesso" name="Dati anagrafici" value="Maschio">
+                        Maschio
+
+                        <input type="radio" id="sesso" name="Dati anagrafici" value="Femmina">
+                        Femmina
 
                     </label>
-
-                    <input type="text" id="mail" name="mail" autofocus required>
                 </div>
 
                 <div>
-                    <label for="hero">
-                        <spa>Nome:</spa>
-                        <strong><abbr title="richiesto">*</abbr></strong>
-
+                    <label for="luogo di nascita">
+                        <span>Luogo di nascita:</span>
+                        <input type="text" id="luogo di nascita" name="luogo di nascita">
                     </label>
-
-                    <input type="text" id="hero" name="hero" autofocus required>
                 </div>
-            </section>
-        </form>
+
+                <div>
+                    <label for="data di nascita">
+                        <span>Data di nascita:</span>
+                        <input type="date" id="data di nascita" name="data di nascita">
+                    </label>
+                </div>
+                
+                </fieldset>
+        </div>
+
+        <hr>
+
+        <div>
+            <fieldset>
+                <legend>Password personale</legend>
+                <label for="password">
+                    Inserisci la password:
+                    <input type="password" id="password" name="password" >
+                </label>
+            </fieldset>
+        </div>
+
+        <hr>
+
+        <div>
+            <fieldset>
+                <legend>Dati personali</legend>
+                <div>
+                    <span>Patente:</span>
+                    <label for="auto">
+                        <input type="checkbox" id="auto" name="dati personali" value="Auto">
+                        Auto
+                    </label>
+                    
+                    <label for="moto">
+                        <input type="checkbox" id="moto" name="dati personali" value="moto">
+                        Moto
+                    </label>
+                    <label for="aereo">
+                        <input type="checkbox" id="aereo" name="dati personali" value="aereo">
+                        Aereo
+                    </label>
+                </div>
+
+                <div>
+                    <span>Classe:</span>
+                    <select name="Classe" id="Classe">
+                    <option value="xx">Seleziona la classe</option>
+                    <option value="3ai">Classe 3ai</option>
+                    <option value="3bi">Classe 3bi</option>
+                    <option value="3ci">Classe 3ci</option>
+                    </select>
+                </div>
+
+                <textarea name="commento" cols="30" rows="10">Inserisci qui i tuoi commenti</textarea>
+
+                    
+
+               
+            </fieldset>
+        </div>
+
+        <hr>
+
+        <input type="submit" value="Invia">
+        <input type="reset" value="Reset">
+
     </body>
 </html>
