@@ -4,14 +4,20 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=widht-device" />
         <title>Ordina la tua torta da Silvia</title>
+
+        <style>
+            h1, h2 {
+                text-align: center;
+            }
+        </style>
     </head>
 
     <body>
 
-        <form action="http://127.0.0.1:3000" method="post">
+        <form action="http://127.0.0.1:3000" method="get">
             <h1>Silvia Tomasi | Pastry chef</h1>
             <p>BREVE DESCRIZIONE CHE ANCORA NON HO!!</p>
-            <h2><center>Ordina la tua torta online</center></h2>
+            <h2>Ordina la tua torta online</h2>
             <div>
                 <ol>
                     <li><b>Calcola</b></li>
@@ -63,14 +69,6 @@
                     <hr>
 
                     <div>
-                        <label for="numero di persone">
-                            <span>Numero di persone:</span>
-                            <input type="text">
-                           
-                        </label>
-                    </div>
-
-                    <div>
                         <label for="data">
                             Data di consegna:
                             <input type="date" id="data" name="data" >
@@ -86,6 +84,8 @@
 
                 </fieldset>
             </div>
+
+            <hr>
 
             <!--Crea la tua torta-->
 
@@ -113,9 +113,7 @@
                             <option value="Marmellata">Marmellata</option>
         
                         </select>
-                    </div>
 
-                    <div>
                         <Span>Copertura:</Span>
                         <select name="copertura" id="copertura">
                             <option value="Scegli">Scegli</option>
@@ -135,18 +133,9 @@
                             <option value="Altro">Altro</option>
         
                         </select>
-
                     </div>
 
                     <hr>
-
-                    <div>
-                        <label for="numero di persone">
-                            <span>Numero di persone:</span>
-                            <input type="text">
-                           
-                        </label>
-                    </div>
 
                     <div>
                         <label for="data">
@@ -161,9 +150,9 @@
                         <textarea name="note" id="note" cols="30" rows="5">Note</textarea>
                     </div>
 
-                    <hr>
-
                 </fieldset>
+
+                <hr>
 
                 <!--I tuoi dati-->
         
@@ -181,28 +170,25 @@
                             <strong><abbr title="richiesto">*</abbr></strong>
                             <input type="text" id="cognome" name="I tuoi dati" autofocus required>
                         </label>
-                    </div>
 
-                    <div>
                         <label for="telefono">
                             <span>Telefono:</span>
                             <strong><abbr title="richiesto">*</abbr></strong>
                             <input type="text" id="telefono" name="I tuoi dati" autofocus required>
                         </label>
-    
+
                         <label for="e-mail">
                             <span>E-mail:</span>
                             <strong><abbr title="richiesto">*</abbr></strong>
                             <input type="email" id="e-mail" name="I tuoi dati" autofocus required>
                         </label>
-    
                     </div>
 
                     <hr>
 
                     <div>
-                        <input type="button" value="Ordina la tua torta">
-                        <input type="button" value="Cancella">
+                        <button>Ordina la tua torta</button>
+                        <button>Reset</button>
     
                     </div>
                 </fieldset>
